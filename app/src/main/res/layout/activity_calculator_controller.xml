@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_columnSpan="3"
+    tools:context=".CalculatorController">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="225dp">
+
+        <TextView
+            android:id="@+id/result_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textSize="50sp"
+            android:lines="2"
+            android:background="@color/offWhite"
+            android:textColor="@color/black"/>
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/buttonAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_span="3"
+            android:text="@string/AC"
+            android:onClick="onClearPressed"
+            android:backgroundTint="@color/darkOrange"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:text="@string/divide"
+            android:onClick="onOperatorPressed"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/buttonSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seven"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eight"
+            android:id="@+id/buttonEight"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/buttonNine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nine"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply"
+            android:id="@+id/buttonMultiply"
+            android:onClick="onOperatorPressed"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/buttonFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            android:id="@+id/buttonFive"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/buttonSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/six"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtract"
+            android:id="@+id/buttonMinus"
+            android:onClick="onOperatorPressed"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/buttonOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            android:id="@+id/buttonTwo"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/buttonThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:id="@+id/buttonAdd"
+            android:onClick="onOperatorPressed"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/black"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/buttonZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:text="@string/zero"
+            android:onClick="onDigitPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:text="@string/decimal"
+            android:onClick="onDecimalPressed"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:onClick="onEqualsPressed"
+            android:text="@string/equals"
+            android:backgroundTint="@color/darkOrange"
+            android:textColor="@color/black"/>
+
+    </TableRow>
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/Theme.SimpleCalculator.AppBarOverlay">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            app:popupTheme="@style/Theme.SimpleCalculator.PopupOverlay" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <include layout="@layout/content_calculator_controller" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginEnd="@dimen/fab_margin"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</TableLayout>
